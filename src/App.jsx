@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import MyServices from './components/MyServices';
 import AboutSection from './components/AboutSection';
 import Experience from './components/Experience';
 import WhyHireMe from './components/WhyHireMe';
@@ -11,6 +12,8 @@ import Testimonials from './components/Testimonials';
 import CallToAction from './components/CallToAction';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
 
 function App() {
   const navigate = useNavigate();
@@ -31,7 +34,7 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
-              <Services />
+              <MyServices />
               <div className="flex flex-col lg:flex-row my-20">
                 <Experience />
                 <WhyHireMe />
@@ -40,9 +43,14 @@ function App() {
               <Testimonials />
               <CallToAction />
               <Blog />
+              <Contact />
             </>
           } />
           <Route path="/about" element={<AboutSection />} />
+          <Route path="/services" element={<><MyServices /><Services /></>} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

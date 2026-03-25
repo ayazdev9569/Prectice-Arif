@@ -2,14 +2,14 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative w-full pt-16 pb-24 flex flex-col items-center justify-center text-center">
+        <section className="relative w-full pt-16 flex flex-col items-center justify-center text-center">
             {/* Hello badge */}
-            <div className="inline-block px-4 py-1.5 mb-8 border border-gray-200 rounded-full text-sm font-medium">
+            <div className="inline-block px-4 py-1.5 mb-8 border border-gray-200 rounded-full text-4xl font-medium">
                 hello! <span role="img" aria-label="wave">👋</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-12 tracking-tight">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tight">
                 I'm <span className="text-primary relative inline-block">
                     Jenny
                     <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -20,7 +20,7 @@ const Hero = () => {
             </h1>
 
             {/* Center Image & Badges */}
-            <div className="relative w-full max-w-3xl mx-auto mt-8 flex flex-col items-center">
+            <div className="relative w-full max-w-4xl xl:max-w-6xl mx-auto flex flex-col items-center">
                 {/* Background orange circle (implied from design) */}
                 <div className="absolute bottom-0 w-80 h-80 bg-primary rounded-full z-0 -translate-x-1/2 left-1/2"></div>
 
@@ -40,22 +40,22 @@ const Hero = () => {
                 </div>
 
                 {/* Left Floating Stat */}
-                <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 text-left hidden md:block max-w-[200px]">
-                    <div className="text-4xl text-gray-400 absolute -top-8 -left-4 font-serif">"</div>
-                    <p className="text-xs text-text-medium mb-4 relative z-10">
+                <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 text-left hidden lg:block xl:max-w-sm max-w-xs">
+                    <div className="text-8xl text-gray-400 absolute -top-8 -left-4 font-serif">"</div>
+                    <p className="text-2xl text-text-medium mb-4 relative z-10">
                         Jenny's exceptional product design ensured our website's success. Highly recommended!
                     </p>
-                    <div className="font-bold text-2xl">450+</div>
-                    <div className="text-xs text-text-medium">Client Served</div>
+                    <div className="font-bold text-6xl">450+</div>
+                    <div className="text-xl text-text-medium">Client Served</div>
                 </div>
 
                 {/* Right Floating Stat */}
-                <div className="absolute top-1/4 -right-8 text-right hidden md:block">
-                    <div className="flex gap-1 justify-end text-primary mb-2">
+                <div className="absolute top-1/4 -right-8 text-right hidden lg:block">
+                    <div className="flex gap-1 justify-end text-primary mb-2 text-4xl">
                         {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
                     </div>
-                    <div className="font-bold text-3xl">10 Years</div>
-                    <div className="text-sm text-text-medium">Experts</div>
+                    <div className="font-bold text-6xl">10 Years</div>
+                    <div className="text-2xl text-text-medium">Experts</div>
                 </div>
             </div>
         </section>
