@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -16,15 +16,6 @@ import Resume from './components/Resume';
 import Contact from './components/Contact';
 
 function App() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    // On mount (which happens on reload), if not already at home, navigate to home
-    if (location.pathname !== '/') {
-      navigate('/', { replace: true });
-    }
-  }, []); // Empty dependency array ensures this runs only once on mount
   return (
     <div className="min-h-screen bg-light text-text-dark font-sans flex flex-col overflow-x-hidden">
       <Header />

@@ -1,7 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
+    const getLinkClass = ({ isActive }) =>
+        `transition-all duration-300 ease-in-out ${isActive ? 'text-red-600' : 'hover:text-primary'}`;
+
     return (
         <footer className="w-full max-w-7xl mx-auto px-6 py-12 mt-20 border-t border-gray-200">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -11,11 +15,11 @@ const Footer = () => {
                 </div>
 
                 <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium text-text-medium">
-                    <li><a href="#" className="hover:text-primary transition-colors">Home</a></li>
-                    <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                    <li><a href="#" className="hover:text-primary transition-colors">Service</a></li>
-                    <li><a href="#" className="hover:text-primary transition-colors">Works</a></li>
-                    <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
+                    <li><NavLink to="/" end className={getLinkClass}>Home</NavLink></li>
+                    <li><NavLink to="/about" className={getLinkClass}>About Us</NavLink></li>
+                    <li><NavLink to="/services" className={getLinkClass}>Service</NavLink></li>
+                    <li><NavLink to="/projects" className={getLinkClass}>Works</NavLink></li>
+                    <li><NavLink to="/blog" className={getLinkClass}>Blog</NavLink></li>
                 </ul>
 
                 <div className="flex gap-4">
