@@ -52,8 +52,8 @@ const Header = () => {
 
                 {/* Center Logo Area inside Nav */}
                 <div className="flex items-center gap-2 mx-8 cursor-pointer">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">J</div>
-                    <span className="font-bold text-base hover:text-primary transition-colors">Jenny</span>
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">A</div>
+                    <span className="font-bold text-base hover:text-primary transition-colors">Ayaz</span>
                 </div>
 
                 <NavLink
@@ -80,7 +80,7 @@ const Header = () => {
             </nav>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
                 className="lg:hidden block p-2 bg-black text-white rounded-lg z-50 relative border border-white/10"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
@@ -90,7 +90,7 @@ const Header = () => {
 
             {/* Overlay */}
             {isMobileMenuOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/50 z-40 lg:hidden"
                     onClick={() => setIsMobileMenuOpen(false)}
                 />
@@ -100,17 +100,17 @@ const Header = () => {
             <nav className={`fixed top-0 right-0 h-full w-64 md:w-80 bg-black text-white p-8 flex flex-col gap-6 z-50 transform transition-transform duration-300 ease-in-out lg:hidden border-l border-white/10 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex items-center justify-between mb-8 mt-2">
                     <div className="flex items-center gap-2 cursor-pointer">
-                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">J</div>
-                        <span className="font-bold text-xl hover:text-primary transition-colors">Jenny</span>
+                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">A</div>
+                        <span className="font-bold text-xl hover:text-primary transition-colors">Ayaz</span>
                     </div>
-                    <button 
+                    <button
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="p-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
                     >
                         <X size={20} />
                     </button>
                 </div>
-                
+
                 <div className="flex flex-col gap-6 text-lg">
                     <NavLink to="/" end className={getLinkClass('Home')} onClick={() => handleLinkClick('Home')}>Home</NavLink>
                     <NavLink to="/about" className={getLinkClass('About')} onClick={() => handleLinkClick('About')}>About</NavLink>

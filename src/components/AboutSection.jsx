@@ -132,7 +132,7 @@ const AboutSection = () => {
             {/* Projects Section (Contact Form as per reference) */}
             <div className="w-full max-w-3xl px-8 text-center mb-20">
                 <h2 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-                    Projects
+                    Network
                 </h2>
                 <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 

@@ -1,7 +1,7 @@
 export const contactInfo = {
-    email: "hello@jenny.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Design Street, Creative City, NY 10001",
+    email: "mohammadayazkhan745@gmail.com",
+    phone: "+91 9569835971",
+    address: "Chowk Bazaar Gonda, Utter Predesh 271001",
     availability: {
         status: "Available for work", // or "Busy", "On Leave"
         message: "I typically respond within 24 hours."
@@ -12,26 +12,26 @@ export const socialLinks = [
     {
         id: "linkedin",
         name: "LinkedIn",
-        url: "https://linkedin.com/in/jenny",
-        username: "@jenny-designer"
+        url: "https://www.linkedin.com/in/mohammad-ayaz-khan-a99048383/",
+        username: "@Mohammad Ayaz khan"
     },
     {
         id: "github",
         name: "GitHub",
-        url: "https://github.com/jenny",
-        username: "@jenny"
+        url: "https://github.com/ayazdev9569",
+        username: "@ayazdev9569"
     },
     {
         id: "twitter",
         name: "Twitter",
-        url: "https://twitter.com/jenny",
-        username: "@jenny_designs"
+        url: "https://x.com/yourporfile",
+        username: "@your profile"
     },
     {
         id: "instagram",
         name: "Instagram",
-        url: "https://instagram.com/jenny",
-        username: "@jenny.designs"
+        url: "https://www.instagram.com/ayaz.khan3420?igsh=emhlamliazdjMThv",
+        username: "@Ayaz.khan3420"
     }
 ];
 
