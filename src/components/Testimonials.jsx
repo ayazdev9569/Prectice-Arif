@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
     return (
-        <section className="w-full bg-[#1C1C1C] rounded-[40px] px-8 py-20 text-white my-12 text-center relative overflow-hidden">
+        <section className="w-full bg-dark rounded-[40px] px-8 py-20 text-white my-12 text-center relative overflow-hidden">
             <h2 className="text-4xl font-semibold mb-2 relative z-10">
                 Testimonials that
             </h2>
@@ -22,7 +22,7 @@ const Testimonials = () => {
                         ★★★★★ <span className="text-white ml-2">5.0</span>
                     </div>
                     <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                        Jenny's exceptional product design ensured our website's success. Highly recommended for any complex design solutions!
+                        Ayaz's exceptional frontend development ensured our website's success. Highly recommended for any complex frontend solutions!
                     </p>
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-gray-500"></div>

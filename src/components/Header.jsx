@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
-    const [activeSection, setActiveSection] = useState('Home');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     // Prevent scrolling when menu is open
@@ -15,11 +14,10 @@ const Header = () => {
         }
     }, [isMobileMenuOpen]);
 
-    const getLinkClass = (name) =>
-        `transition-all duration-300 ease-in-out ${activeSection === name ? 'text-red-600' : 'hover:text-primary'}`;
+    const getLinkClass = (isActive) =>
+        `transition-all duration-300 ease-in-out ${isActive ? 'text-red-600' : 'hover:text-primary'}`;
 
-    const handleLinkClick = (name) => {
-        setActiveSection(name);
+    const handleLinkClick = () => {
         setIsMobileMenuOpen(false);
     };
 
@@ -30,22 +28,22 @@ const Header = () => {
                 <NavLink
                     to="/"
                     end
-                    className={getLinkClass('Home')}
-                    onClick={() => handleLinkClick('Home')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     Home
                 </NavLink>
                 <NavLink
                     to="/about"
-                    className={getLinkClass('About')}
-                    onClick={() => handleLinkClick('About')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     About
                 </NavLink>
                 <NavLink
                     to="/services"
-                    className={getLinkClass('Service')}
-                    onClick={() => handleLinkClick('Service')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     Service
                 </NavLink>
@@ -58,22 +56,22 @@ const Header = () => {
 
                 <NavLink
                     to="/resume"
-                    className={getLinkClass('Resume')}
-                    onClick={() => handleLinkClick('Resume')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     Resume
                 </NavLink>
                 <NavLink
                     to="/projects"
-                    className={getLinkClass('Project')}
-                    onClick={() => handleLinkClick('Project')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     Project
                 </NavLink>
                 <NavLink
                     to="/contact"
-                    className={getLinkClass('Contact')}
-                    onClick={() => handleLinkClick('Contact')}
+                    className={({ isActive }) => getLinkClass(isActive)}
+                    onClick={handleLinkClick}
                 >
                     Contact Us
                 </NavLink>
@@ -112,12 +110,12 @@ const Header = () => {
                 </div>
 
                 <div className="flex flex-col gap-6 text-lg">
-                    <NavLink to="/" end className={getLinkClass('Home')} onClick={() => handleLinkClick('Home')}>Home</NavLink>
-                    <NavLink to="/about" className={getLinkClass('About')} onClick={() => handleLinkClick('About')}>About</NavLink>
-                    <NavLink to="/services" className={getLinkClass('Service')} onClick={() => handleLinkClick('Service')}>Service</NavLink>
-                    <NavLink to="/resume" className={getLinkClass('Resume')} onClick={() => handleLinkClick('Resume')}>Resume</NavLink>
-                    <NavLink to="/projects" className={getLinkClass('Project')} onClick={() => handleLinkClick('Project')}>Project</NavLink>
-                    <NavLink to="/contact" className={getLinkClass('Contact')} onClick={() => handleLinkClick('Contact')}>Contact Us</NavLink>
+                    <NavLink to="/" end className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>Home</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>About</NavLink>
+                    <NavLink to="/services" className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>Service</NavLink>
+                    <NavLink to="/resume" className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>Resume</NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>Project</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => getLinkClass(isActive)} onClick={handleLinkClick}>Contact Us</NavLink>
                 </div>
             </nav>
         </header>

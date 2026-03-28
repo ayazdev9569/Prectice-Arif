@@ -9,7 +9,7 @@ const WhyHireMe = () => {
             <div className="relative z-10 flex flex-col items-center">
                 {/* Character Image */}
                 <div className="w-48 h-48 rounded-full border-4 border-white shadow-lg overflow-hidden mb-8">
-                    <img src="/hero_portrait.png" alt="Jenny Avatar" className="w-full h-full object-cover object-top" />
+                    <img src="/hero_portrait.png" alt="Ayaz Avatar" className="w-full h-full object-cover object-top" />
                 </div>
 
                 <h3 className="text-3xl font-semibold mb-4 text-center">

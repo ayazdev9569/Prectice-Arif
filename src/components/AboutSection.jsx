@@ -27,7 +27,7 @@ const AboutSection = () => {
                         <div className="relative z-10 w-[280px] h-[280px] md:w-[420px] md:h-[420px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
                             <img
                                 src="/hero_portrait.png"
-                                alt="Jenny"
+                                alt="Ayaz"
                                 className="w-full h-full object-cover object-top filter grayscale"
                             />
                         </div>
@@ -185,7 +185,7 @@ const AboutSection = () => {
                 </div>
 
                 <p className="text-center text-text-medium text-sm font-medium mb-10 relative z-20">
-                    Madelyn Torff 2023
+                    Ayaz 2024
                 </p>
 
                 {/* Wavy Background (CSS based) */}
